@@ -3,47 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Arcade Encyclopedia — Prototype Web</title>
-<style>
-:root{--bg:#070b12;--side:#0a101a;--panel:#0e1724;--panel2:#111d2c;--line:#24344b;--text:#eef4ff;--muted:#91a0b5;--cyan:#37c7ff;--purple:#c13cff;--green:#35d08a;--yellow:#ffd34f}
-*{box-sizing:border-box} body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:linear-gradient(145deg,#07101d,#05080e 55%);color:var(--text)}
-.app{display:grid;grid-template-columns:245px 1fr;min-height:100vh}
-aside{background:#080e17;border-right:1px solid var(--line);padding:22px 14px;position:sticky;top:0;height:100vh}
-.logo{font-size:28px;font-weight:900;letter-spacing:.08em;line-height:.9;margin:6px 10px 30px;background:linear-gradient(90deg,#dd4fff,#5ca7ff);-webkit-background-clip:text;color:transparent}
-.logo small{display:block;color:#fff;font-size:12px;letter-spacing:.16em;margin-top:7px}
-.nav{display:grid;gap:7px}.nav button{background:transparent;color:#c8d4e5;border:0;text-align:left;padding:11px 12px;border-radius:8px;cursor:pointer}
-.nav button.active,.nav button:hover{background:linear-gradient(90deg,#34124c,#1f173d);color:#f6a7ff}
-main{min-width:0}.top{height:72px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px;padding:0 24px;background:#070c14cc;position:sticky;top:0;z-index:4}
-.search{flex:1;max-width:760px;background:#0d1623;border:1px solid var(--line);border-radius:9px;padding:11px 14px;color:white}
-.content{padding:22px;display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:18px}
-.panel{background:linear-gradient(180deg,#0f1927,#0b131f);border:1px solid #203047;border-radius:10px}
-.catalog{padding:18px}.crumb{font-size:12px;color:var(--muted);margin-bottom:14px}
-.game-title{font-size:31px;font-weight:900;margin:0 0 14px}.facts{display:flex;gap:20px;flex-wrap:wrap;padding-bottom:14px;border-bottom:1px solid var(--line)}
-.fact{font-size:12px;color:var(--muted)}.fact b{display:block;color:#fff;margin-top:5px;font-size:14px}
-.tabs{display:flex;gap:7px;flex-wrap:wrap;padding:12px 0}.tab{padding:9px 12px;border:1px solid var(--line);border-radius:7px;background:#0b1421;color:#cdd8e8}
-.hero{display:grid;grid-template-columns:minmax(300px,1.3fr) minmax(200px,.7fr);gap:14px}
-.media-box{background:#08101a;border:1px solid var(--line);border-radius:9px;min-height:400px;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.media-box img{width:100%;height:100%;max-height:440px;object-fit:contain}
-.info{padding:18px;background:#101c2b;border:1px solid var(--line);border-radius:9px;line-height:1.55}.info p{color:#c4cfdd}.kv{display:grid;grid-template-columns:120px 1fr;gap:6px;font-size:13px}.kv span:nth-child(odd){color:#8fa0b7}
-.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}.thumb{height:95px;background:#07101a;border:1px solid var(--line);border-radius:7px;overflow:hidden}.thumb img{width:100%;height:100%;object-fit:cover}
-.right{display:grid;gap:16px;align-content:start}.card{padding:16px}.card h3{margin:0 0 12px}.status{display:flex;gap:7px;flex-wrap:wrap}.status button{border:1px solid var(--line);background:#101a28;color:white;border-radius:7px;padding:9px;cursor:pointer}.status button.on{background:#123d2d;border-color:#2e9d70}
-.radio-now{font-weight:700;margin-bottom:4px}.small{font-size:12px;color:var(--muted)}audio{width:100%;margin:12px 0}.open-radio{display:block;text-align:center;text-decoration:none;color:white;border:1px solid #5b2b82;background:#301447;padding:9px;border-radius:7px}
-.library{display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:12px;margin-top:18px}.tile{background:#0b1421;border:1px solid var(--line);border-radius:9px;overflow:hidden;cursor:pointer}.tile img{height:225px;width:100%;object-fit:contain;background:#050910}.tile div{padding:10px}.tile b{display:block}.tile small{color:var(--muted)}
-.addform{display:none;margin-top:18px;padding:15px;border:1px solid var(--line);border-radius:9px;background:#0b1421}.addform.open{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.addform input,.addform textarea{background:#080f19;border:1px solid var(--line);color:white;border-radius:6px;padding:9px}.addform textarea{grid-column:1/-1;min-height:80px}.addform button{grid-column:1/-1;background:#391750;color:white;border:1px solid #6a2d8c;border-radius:7px;padding:10px}
-@media(max-width:1000px){.app{grid-template-columns:1fr}aside{display:none}.content{grid-template-columns:1fr}.hero{grid-template-columns:1fr}}
-</style>
+<meta name="theme-color" content="#070b12">
+<title>Arcade Encyclopedia — Phase 2 Alpha PC</title>
+<link rel="stylesheet" href="assets/css/app.css">
 </head>
 <body>
 <div class="app">
-<aside>
-<div class="logo">ARCADE<small>ENCYCLOPEDIA</small></div>
-<div class="nav">
-<button class="active">⌂ ACCUEIL</button><button>🎮 JEUX</button><button>▣ SYSTÈMES</button><button>▥ CONSTRUCTEURS</button>
-<button>▤ MES JEUX</button><button>♡ WISHLIST</button><button>▧ IMAGES</button><button>▣ FLYERS</button><button>📻 ARCADE RADIO</button>
-</div>
+<aside class="sidebar">
+  <div class="logo">ARCADE<small>ENCYCLOPEDIA</small></div>
+  <div class="nav">
+    <button class="active" data-mode="all">⌂ ACCUEIL / TOUS LES JEUX</button>
+    <button data-mode="own">▤ MES JEUX</button>
+    <button data-mode="fav">★ FAVORIS</button>
+    <button data-mode="wish">♡ WISHLIST</button>
+    <button onclick="document.getElementById('radio').scrollIntoView({behavior:'smooth'})">📻 ARCADE RADIO</button>
+  </div>
 </aside>
 <main>
-<div class="top"><input id="search" class="search" placeholder="Rechercher un jeu, un système, un constructeur..."><button class="tab" onclick="toggleAdd()">＋ AJOUTER UN JEU</button></div>
+<div class="top">
+  <input id="search" class="search" placeholder="Rechercher un jeu, un système, un constructeur...">
+  <span id="count" class="small"></span>
+  <button id="addButton" class="action">＋ AJOUTER UN JEU</button>
+</div>
 <div class="content">
 <div>
 <section class="panel catalog">
@@ -54,70 +35,35 @@ main{min-width:0}.top{height:72px;border-bottom:1px solid var(--line);display:fl
 </div>
 <div class="tabs"><button class="tab">APERÇU</button><button class="tab">INFOS TECHNIQUES</button><button class="tab">HISTOIRE</button><button class="tab">GALERIE</button><button class="tab">VIDÉOS</button><button class="tab">SOURCES</button></div>
 <div class="hero">
-<div>
-<div class="media-box"><img id="cabinet" alt="Image du jeu"></div>
-<div class="gallery" id="gallery"></div>
-</div>
+<div><div class="media-box"><img id="cabinet" alt="Image du jeu"></div><div class="gallery" id="gallery"></div></div>
 <div class="info">
 <div class="media-box" style="min-height:280px"><img id="flyer" alt="Flyer / pochette"></div>
 <p id="desc"></p>
-<div class="kv">
-<span>Développeur</span><b id="developer"></b><span>Éditeur</span><b id="publisher"></b><span>Joueurs</span><b id="players"></b><span>Type média</span><b>Flyer + borne</b>
-</div>
-<p class="small">Sources : <a id="source1" target="_blank" style="color:#49c7ff">image</a> · <a id="source2" target="_blank" style="color:#49c7ff">flyer</a></p>
+<div class="kv"><span>Développeur</span><b id="developer"></b><span>Éditeur</span><b id="publisher"></b><span>Joueurs</span><b id="players"></b><span>Type média</span><b>Flyer + borne</b></div>
+<p class="small">Sources : <a id="source1" target="_blank" rel="noopener" style="color:#49c7ff">image</a> · <a id="source2" target="_blank" rel="noopener" style="color:#49c7ff">flyer</a></p>
 </div>
 </div>
-
-<form class="addform" id="addform" onsubmit="addGame(event)">
+<form class="addform" id="addform">
 <input id="aTitle" required placeholder="Titre du jeu"><input id="aYear" required placeholder="Année">
 <input id="aMaker" placeholder="Constructeur / éditeur"><input id="aSystem" placeholder="Système">
 <input id="aGenre" placeholder="Genre"><input id="aImage" placeholder="URL image du jeu">
 <input id="aFlyer" placeholder="URL flyer / pochette"><input id="aSource" placeholder="URL source">
 <textarea id="aDesc" placeholder="Description"></textarea><button type="submit">ENREGISTRER LE JEU DANS LE NAVIGATEUR</button>
 </form>
-
 <div class="library" id="library"></div>
 </section>
 </div>
 <aside class="right">
-<section class="panel card"><h3>MA COLLECTION</h3><div class="status"><button id="own" onclick="toggleFlag('own')">✓ POSSÉDÉ</button><button id="fav" onclick="toggleFlag('fav')">★ FAVORI</button><button id="wish" onclick="toggleFlag('wish')">♥ WISHLIST</button></div><p class="small">Les statuts sont sauvegardés localement dans ton navigateur.</p></section>
-<section class="panel card"><h3>📻 ARCADE RADIO</h3><div class="radio-now">Kohina — old school game & demo music</div><div class="small">Vraie radio Internet de musique rétro jeu/demos.</div>
-<audio id="radio" controls preload="none"><source src="https://kohina.duckdns.org/stream.ogg" type="audio/ogg"></audio>
-<a class="open-radio" href="https://player.kohina.com" target="_blank">OUVRIR LE LECTEUR OFFICIEL</a>
-<p class="small">Si le navigateur bloque le flux direct depuis un fichier local, le lecteur officiel reste disponible.</p></section>
-<section class="panel card"><h3>PROTOTYPE</h3><p class="small">✓ vraie fiche détaillée<br>✓ image + flyer<br>✓ catalogue<br>✓ ajout de jeux<br>✓ favoris/collection<br>✓ radio Internet<br>✓ sauvegarde locale</p></section>
+<section class="panel card"><h3>MA COLLECTION</h3><div class="status"><button id="own">✓ POSSÉDÉ</button><button id="fav">★ FAVORI</button><button id="wish">♥ WISHLIST</button></div><p class="small">Les statuts sont sauvegardés localement sur ce PC dans le navigateur.</p></section>
+<section class="panel card"><h3>📻 ARCADE RADIO</h3><div class="radio-now">Kohina — old school game & demo music</div><div class="small">Flux Internet rétro. Connexion requise.</div>
+<audio id="radio" controls preload="none"><source src="https://player.kohina.com/icecast/stream.aac" type="audio/aac"></audio>
+<a class="open-radio" href="https://player.kohina.com/streamplayer/" target="_blank" rel="noopener noreferrer">OUVRIR LE LECTEUR KOHINA</a>
+<p id="radioStatus" class="small">Clique sur ▶ pour écouter. Si le lecteur intégré est bloqué, clique sur le bouton ci-dessus.</p></section>
+<section class="panel card"><h3>PHASE 2 ALPHA PC</h3><p class="small">✓ structure HTML/CSS/JS séparée<br>✓ fiches détaillées<br>✓ médias réels externes<br>✓ recherche<br>✓ ajout de jeux<br>✓ collection/favoris/wishlist<br>✓ Arcade Radio<br>✓ lancement Windows</p></section>
 </aside>
 </div>
 </main>
 </div>
-<script>
-const builtins=[
-{id:"sf2",title:"Street Fighter II: The World Warrior",year:"1991",maker:"Capcom",system:"CPS-1",genre:"Combat",developer:"Capcom",publisher:"Capcom",players:"1-2",
-desc:"Jeu de combat emblématique de Capcom, publié sur CP System. Cette fiche sert de référence visuelle pour le prototype Arcade Encyclopedia.",
-cabinet:"https://commons.wikimedia.org/wiki/Special:FilePath/Street%20Fighter%20II%20arcade%20machine.jpg?width=1000",
-flyer:"https://flyers.arcade-museum.com/videogame-flyers/1/street-fighter-ii-the-world-warrior-01900-01.jpg",
-source1:"https://commons.wikimedia.org/wiki/File:Street_Fighter_II_arcade_machine.jpg",source2:"https://flyers.arcade-museum.com/videogames/show/1900"},
-{id:"pacman",title:"Pac-Man",year:"1980",maker:"Namco",system:"Pac-Man hardware",genre:"Labyrinthe",developer:"Namco",publisher:"Namco / Midway",players:"1-2 alternés",
-desc:"Le classique de Namco de 1980, présenté ici avec une image de borne et un véritable flyer commercial.",
-cabinet:"https://commons.wikimedia.org/wiki/Special:FilePath/Arcade1up%20Golden%20Tee%2C%20Arcade1up%20Pac%20Man%20Arcade%20Games.jpg?width=1000",
-flyer:"https://flyers.arcade-museum.com/videogame-flyers/0/pac-man-00724-01.jpg",
-source1:"https://commons.wikimedia.org/wiki/Category:Pac-Man_arcade_machines",source2:"https://flyers.arcade-museum.com/videogames/show/723"},
-{id:"metalslug",title:"Metal Slug",year:"1996",maker:"SNK",system:"Neo Geo MVS",genre:"Run and gun",developer:"Nazca",publisher:"SNK",players:"1-2",
-desc:"Run and gun de 1996 célèbre pour son animation et son action coopérative sur Neo Geo MVS.",
-cabinet:"https://commons.wikimedia.org/wiki/Special:FilePath/Mus%C3%A9e%20M%C3%A9canique%20222.JPG?width=1000",
-flyer:"https://flyers.arcade-museum.com/videogame-flyers/3/metal-slug-03511-01.jpg",
-source1:"https://commons.wikimedia.org/wiki/File:Mus%C3%A9e_M%C3%A9canique_222.JPG",source2:"https://flyers.arcade-museum.com/videogames/show/3515"}
-];
-let custom=JSON.parse(localStorage.getItem("ae_custom_games")||"[]");
-let games=[...builtins,...custom], current=games[0];
-let flags=JSON.parse(localStorage.getItem("ae_flags")||"{}");
-function esc(s){return String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
-function show(g){current=g; title.textContent=g.title.toUpperCase();crumbTitle.textContent=g.title;crumbSystem.textContent=g.system;maker.textContent=g.maker;year.textContent=g.year;genre.textContent=g.genre;system.textContent=g.system;developer.textContent=g.developer||g.maker;publisher.textContent=g.publisher||g.maker;players.textContent=g.players||"—";desc.textContent=g.desc||"";cabinet.src=g.cabinet||g.flyer;flyer.src=g.flyer||g.cabinet;source1.href=g.source1||"#";source2.href=g.source2||g.source1||"#";gallery.innerHTML=[g.cabinet,g.flyer].filter(Boolean).map(x=>`<div class="thumb"><img src="${x}"></div>`).join("");updateFlags()}
-function render(){let q=search.value.toLowerCase();let list=games.filter(g=>[g.title,g.maker,g.system,g.genre].join(" ").toLowerCase().includes(q));library.innerHTML=list.map(g=>`<div class="tile" onclick="show(games.find(x=>x.id==='${g.id}'))"><img src="${g.flyer||g.cabinet}"><div><b>${esc(g.title)}</b><small>${esc(g.maker)} · ${esc(g.year)} · ${esc(g.system)}</small></div></div>`).join("")}
-function toggleFlag(k){flags[current.id]??={};flags[current.id][k]=!flags[current.id][k];localStorage.setItem("ae_flags",JSON.stringify(flags));updateFlags()}
-function updateFlags(){for(const k of ["own","fav","wish"])document.getElementById(k).classList.toggle("on",!!flags[current.id]?.[k])}
-function toggleAdd(){addform.classList.toggle("open")}
-function addGame(e){e.preventDefault();let g={id:"custom-"+Date.now(),title:aTitle.value,year:aYear.value,maker:aMaker.value||"Inconnu",system:aSystem.value||"Inconnu",genre:aGenre.value||"Autre",developer:aMaker.value,publisher:aMaker.value,players:"—",cabinet:aImage.value,flyer:aFlyer.value||aImage.value,source1:aSource.value,source2:aSource.value,desc:aDesc.value};custom.push(g);localStorage.setItem("ae_custom_games",JSON.stringify(custom));games=[...builtins,...custom];e.target.reset();addform.classList.remove("open");render();show(g)}
-search.addEventListener("input",render);render();show(current);
-</script>
-</body></html>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
