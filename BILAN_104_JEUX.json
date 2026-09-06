@@ -1,0 +1,139 @@
+{
+  "totalEnrichedExcludingModel": 104,
+  "model": "NAM-1975",
+  "added": [
+    "Samurai Shodown",
+    "Samurai Shodown 2",
+    "Samurai Shodown 3: Blades of Blood",
+    "Samurai Shodown 4: Amakusa's Revenge",
+    "Samurai Shodown 5"
+  ],
+  "remaining": [
+    "Samurai Shodown 5 Special",
+    "Samurai Shodown RPG",
+    "Savage Reign",
+    "Sengoku 2",
+    "Sengoku 3",
+    "Shock Troopers",
+    "Shock Troopers 2nd Squad",
+    "Soccer Brawl",
+    "Spinmaster",
+    "Stakes Winner",
+    "Stakes Winner 2",
+    "Street Hoop",
+    "Strikers 1945 Plus",
+    "Super Baseball 2020",
+    "Super Dodge Ball",
+    "Super Sidekicks",
+    "Super Sidekicks 2",
+    "Super Sidekicks 3",
+    "The Ultimate 11",
+    "ADK World",
+    "Bang Bead",
+    "Battle Flip Shot",
+    "Breakers Revenge",
+    "Captain Tomaday",
+    "Crossed Swords II",
+    "Fight Fever",
+    "Ganryu",
+    "Goal! Goal! Goal!",
+    "Gururin",
+    "Idol Mahjong Final Romance 2",
+    "Ironclad",
+    "Neo Geo CD Special",
+    "SNK vs. Capcom: SVC Chaos",
+    "Tecmo World Soccer '96",
+    "The Irritating Maze",
+    "The King of Fighters '96 Collection",
+    "Thrash Rally",
+    "Top Hunter: Roddy & Cathy",
+    "Twinkle Star Sprites",
+    "Viewpoint",
+    "Voltage Fighter Gowcaizer",
+    "Waku Waku 7",
+    "Windjammers",
+    "World Heroes",
+    "World Heroes 2",
+    "World Heroes 2 Jet",
+    "World Heroes Perfect",
+    "Zed Blade",
+    "ZinTrick",
+    "ZuPaPa!",
+    "Matrimelee"
+  ],
+  "notes": "Cinq fiches enrichies et sourcées. Le compteur ne signifie pas que toutes les données sont entièrement vérifiées.",
+  "pending": [
+    {
+      "title": "Samurai Shodown",
+      "pending": [
+        "Prix de lancement JP/US/France",
+        "Scans de presse d’époque",
+        "Tracklist exhaustive",
+        "Vidéo individuelle vérifiée",
+        "Dates occidentales à recouper"
+      ]
+    },
+    {
+      "title": "Samurai Shodown 2",
+      "pending": [
+        "Prix de lancement JP/US/France",
+        "Scans de presse d’époque",
+        "Tracklist exhaustive",
+        "Vidéo individuelle vérifiée",
+        "Dates occidentales à recouper"
+      ]
+    },
+    {
+      "title": "Samurai Shodown 3: Blades of Blood",
+      "pending": [
+        "Prix de lancement JP/US/France",
+        "Scans de presse d’époque",
+        "Tracklist exhaustive",
+        "Vidéo individuelle vérifiée",
+        "Dates occidentales à recouper"
+      ]
+    },
+    {
+      "title": "Samurai Shodown 4: Amakusa's Revenge",
+      "pending": [
+        "Prix de lancement JP/US/France",
+        "Scans de presse d’époque",
+        "Tracklist exhaustive",
+        "Vidéo individuelle vérifiée",
+        "Dates occidentales à recouper"
+      ]
+    },
+    {
+      "title": "Samurai Shodown 5",
+      "pending": [
+        "Prix de lancement JP/US/France",
+        "Scans de presse d’époque",
+        "Tracklist exhaustive",
+        "Vidéo individuelle vérifiée",
+        "Dates occidentales à recouper"
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "title": "Samurai Shodown",
+      "count": 2
+    },
+    {
+      "title": "Samurai Shodown 2",
+      "count": 2
+    },
+    {
+      "title": "Samurai Shodown 3: Blades of Blood",
+      "count": 2
+    },
+    {
+      "title": "Samurai Shodown 4: Amakusa's Revenge",
+      "count": 2
+    },
+    {
+      "title": "Samurai Shodown 5",
+      "count": 2
+    }
+  ]
+}
